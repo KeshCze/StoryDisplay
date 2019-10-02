@@ -1,16 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+//our root app component
+import {Component, NgModule,Input,ComponentFactory,ComponentRef, ComponentFactoryResolver, ViewContainerRef, ChangeDetectorRef, TemplateRef, ViewChild, Output, EventEmitter} from '@angular/core'
+import {BrowserModule} from '@angular/platform-browser'
+import {AlertComponent} from './alert.component';
+import {App} from './app.component';
 
-import { AppComponent } from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [ BrowserModule, BrowserAnimationsModule ],
+  declarations: [ App , AlertComponent],
+  entryComponents: [AlertComponent],
+  bootstrap: [ App ]
 })
-export class AppModule { }
+export class AppModule {}
